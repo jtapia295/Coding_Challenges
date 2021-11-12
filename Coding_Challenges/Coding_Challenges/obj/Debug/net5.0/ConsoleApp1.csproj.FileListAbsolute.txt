@@ -1,0 +1,16 @@
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.exe
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.deps.json
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.json
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.dev.json
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.dll
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ref\ConsoleApp1.dll
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.pdb
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.AssemblyReference.cache
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfo.cs
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.dll
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ref\ConsoleApp1.dll
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.pdb
+D:\Coding_Projects\Coding_Challenges\Coding_Challenges\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.genruntimeconfig.cache
