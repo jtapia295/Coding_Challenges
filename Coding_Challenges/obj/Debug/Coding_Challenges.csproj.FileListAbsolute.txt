@@ -1,0 +1,6 @@
+/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/obj/Debug/Coding_Challenges.csproj.AssemblyReference.cache
+/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/obj/Debug/Coding_Challenges.csproj.CoreCompileInputs.cache
+/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/bin/Debug/Coding_Challenges.exe
+/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/bin/Debug/Coding_Challenges.pdb
+/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/obj/Debug/Coding_Challenges.exe
+/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/obj/Debug/Coding_Challenges.pdb
