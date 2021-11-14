@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{F3E86B6B-117C-4BEB-996C-45BA18D59CB5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Coding_Challenges/ConsoleApp1/PalindromeChallenge.cs">
+    <Files>
+      <File FileName="Coding_Challenges/ConsoleApp1/PalindromeChallenge.cs" Line="29" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Coding_Challenges" expanded="True">
+            <Node name="Coding_Challenges" expanded="True">
+              <Node name="PalindromeChallenge.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Coding__Challenges PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
