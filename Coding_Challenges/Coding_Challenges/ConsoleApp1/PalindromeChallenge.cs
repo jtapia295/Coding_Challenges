@@ -21,13 +21,13 @@ namespace Coding_Challenges
         //Method to add adjacent pair of numbers
         public static string intDescendent(string parentNumber)
         {
-            int[] childNum = new int[parentNumber.Length /2];
+            string[] childNum = new string[parentNumber.Length];
             for (int i = 0; i < parentNumber.Length; i += 2)
             {
                 try
                 {
-                   int iSum = Int32.Parse(parentNumber[i].ToString()) + Int32.Parse(parentNumber[i + 1].ToString());
-                   childNum.Append(iSum);
+                    string iSum = (Int32.Parse(parentNumber[i].ToString()) + Int32.Parse(parentNumber[i + 1].ToString())).ToString();
+                    childNum[i] = iSum;
                 }
                 catch (IndexOutOfRangeException ex)
                 {
@@ -35,6 +35,7 @@ namespace Coding_Challenges
                 }
             }
             string childDesc = string.Join("", childNum);
+            childDesc.Trim();
 
             return childDesc;
         }
@@ -57,25 +58,25 @@ namespace Coding_Challenges
             bool palinCheck = checkNumber(userInput);
             Console.WriteLine($"You entered {userInput}");
             string currentNum = userInput;
-            while (currentNum.Length > 2)
+            while (currentNum.Length >= 2)
             {
                 if (palinCheck)
                 {
                     Console.WriteLine($"Your number {currentNum} is a palindrome");
                     currentNum = "h";
-                    
                 }
-                else
+                else if (!palinCheck)
                 {
                     Console.WriteLine($"Your number {currentNum} is not a palindrome");
                     currentNum = intDescendent(currentNum);
                     palinCheck = checkNumber(currentNum);
+                    if (currentNum.Length ==2)
+                    {
+                        Console.WriteLine($"Your number {currentNum} is not a palindrome");
+                        currentNum = "h";
+                    }
                 }
-  
             }
-
-
-
         }
         public PalindromeChallenge()
         {
