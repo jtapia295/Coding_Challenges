@@ -6,15 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Expert\" />
-    <None Remove="Trivial\" />
-    <None Remove="Medium\" />
-    <None Remove="Hard\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Expert\" />
-    <Folder Include="Trivial\" />
-    <Folder Include="Medium\" />
-    <Folder Include="Hard\" />
+    <Compile Remove="Easy\MonthNumberConversion.cs" />
   </ItemGroup>
 </Project>
