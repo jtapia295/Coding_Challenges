@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{F3E86B6B-117C-4BEB-996C-45BA18D59CB5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Coding_Challenges/ConsoleApp1/PalindromeChallenge.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Coding_Challenges/ConsoleApp1/EasyChallengesFunctions.cs">
     <Files>
-      <File FileName="Coding_Challenges/ConsoleApp1/PalindromeChallenge.cs" Line="22" Column="29" />
-      <File FileName="Coding_Challenges/ConsoleApp1/Palindrome.cs" Line="11" Column="1" />
+      <File FileName="Coding_Challenges/ConsoleApp1/Program.cs" Line="1" Column="1" />
+      <File FileName="Coding_Challenges/ConsoleApp1/EasyChallengesFunctions.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Coding_Challenges" expanded="True">
             <Node name="Coding_Challenges" expanded="True">
-              <Node name="PalindromeChallenge.cs" selected="True" />
+              <Node name="EasyChallengesFunctions.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -31,8 +31,8 @@ namespace Coding_Challenges
                         Console.WriteLine("Please select a number for the month you would like to access, 1-12");
                         bool numCheck = false;
                         int selectedMonth = -1;
-                     
-                        while (numCheck == false || (selectedMonth > 12 || selectedMonth < 0));
+                        numCheck = int.TryParse(Console.ReadLine(), out selectedMonth);
+                        while (numCheck == false || (selectedMonth > 12 || selectedMonth < 0))
                         {
                             Console.WriteLine("Please enter a value between 1-12");
                             numCheck = int.TryParse(Console.ReadLine(), out selectedMonth);
