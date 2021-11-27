@@ -1,56 +1,17 @@
 ﻿using System;
 namespace Coding_Challenges
 {
-    public static class PalindromeChallenge
+    public class EasyChallengesFunction
     {
 
 
-        //Function to check is number or descendants are Palindrome
-        public static bool PalindromeDescendent(int num)
+        //Objective: Create a method that takes in a int and returns the name of the Month corresponding to its numerical value
+        public static string MonthConverter(int num)
         {
-            //Convert num to string
-            string currentNum = num.ToString();
-            
-            while (currentNum.Length >= 2)
-            {
-                //Check if current number is a Palingdrome
-                char[] numArray = currentNum.ToCharArray();
-                Array.Reverse(numArray);
-                bool palinCheck = currentNum == new string(numArray);
-
-                //Ends function if num is a palindrome
-                if (palinCheck)
-                {
-                    return true;
-                }
-                else if (!palinCheck)
-                {
-                    if (currentNum.Length == 2)
-                    {
-                        return false;
-                    }
-
-                    string[] childNum = new string[currentNum.Length];
-
-                    for (int i = 0; i < currentNum.Length; i += 2)
-                    {
-                        try
-                        {
-                            string iSum = (Int32.Parse(currentNum[i].ToString()) + Int32.Parse(currentNum[i + 1].ToString())).ToString();
-                            childNum[i] = iSum;
-                        }
-                        catch (IndexOutOfRangeException ex)
-                        {
-                            Console.WriteLine("Descendent Int Created");
-                        }
-                    }
-                    currentNum = string.Join("", childNum);
-                    currentNum.Trim();
-                }
-             
-            }
-            return false;
-
+            string[] allMonths = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+            int indexedNum = num - 1;
+            string selectedMonth = allMonths[indexedNum];
+            return selectedMonth;
         }
     }
 }

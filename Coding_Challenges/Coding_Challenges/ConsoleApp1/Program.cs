@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using static Coding_Challenges.EasyChallengesFunctions;
+using static Coding_Challenges.EasyChallengesFunction;
 
 namespace Coding_Challenges
 {
@@ -13,10 +13,9 @@ namespace Coding_Challenges
 
             //Have user select the challenge they want to view
             Console.WriteLine("Please select the challenge you would like to cover by entering the number");
-
+            int i = 1;
             foreach (string item in easyChallenges)
             {
-                int i = 1;
                 Console.WriteLine($"{i}.{item}");
                 i++;
             }
@@ -24,23 +23,26 @@ namespace Coding_Challenges
             bool userSelect = int.TryParse(Console.ReadLine(), out int selectedChallenge);
             selectedChallenge = selectedChallenge - 1;
 
-            if (userSelect && (selectedChallenge <= easyChallenges.Count - 1 && selectedChallenge > 0))
+            if (userSelect && (selectedChallenge <= easyChallenges.Count - 1 && selectedChallenge >= 0))
             {
-                switch (easyChallenges)
+                switch (selectedChallenge)
                 {
-                    case easyChallenges[0]
-                    default:
+                    case 0:
+                        Console.WriteLine("Please select a number for the month you would like to access, 1-12");
+                        bool numCheck = false;
+                        int selectedMonth = -1;
+                     
+                        while (numCheck == false || (selectedMonth > 12 || selectedMonth < 0));
+                        {
+                            Console.WriteLine("Please enter a value between 1-12");
+                            numCheck = int.TryParse(Console.ReadLine(), out selectedMonth);
+                        }
+                         Console.WriteLine($"You have accessed the month {MonthConverter(selectedMonth)}");
+                        break;
+                    case 1:
+                        break;
                 }
             }
-
-            //Obtain user Input and validate accordingly
-            Console.WriteLine("Please enter a number");
-
-            string userInput = Console.ReadLine();
-
-
-
-
         }
 
     }
