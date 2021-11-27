@@ -39,7 +39,12 @@ namespace Coding_Challenges
                         }
                          Console.WriteLine($"You have accessed the month {MonthConverter(selectedMonth)}");
                         break;
+                    
                     case 1:
+                        Console.WriteLine("Please enter a list of numbers to parse");
+                        string userInput = Console.ReadLine();
+                        string[] userArray = userInput.Split("");
+
                         break;
                 }
             }
