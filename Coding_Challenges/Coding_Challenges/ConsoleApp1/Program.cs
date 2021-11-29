@@ -43,8 +43,16 @@ namespace Coding_Challenges
                     case 1:
                         Console.WriteLine("Please enter a list of numbers to parse");
                         string userInput = Console.ReadLine();
-                        string[] userArray = userInput.Split("");
-
+                        int it = 0;
+                        int[] numArray = new int[userInput.Length];
+                        foreach(char s in userInput)
+                        {
+                            int num = s - '0';
+                            Console.WriteLine(s);
+                            numArray[it] = num;
+                            it++;
+                        }
+                        Console.WriteLine($"Here is your min and max number from your list of numbers,{ FindMinMax(numArray)} "); 
                         break;
                 }
             }

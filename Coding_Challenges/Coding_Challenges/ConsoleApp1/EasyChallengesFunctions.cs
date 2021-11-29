@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 namespace Coding_Challenges
 {
     public class EasyChallengesFunction
@@ -17,21 +19,20 @@ namespace Coding_Challenges
         //Objective: Create a function that takes in an Int Array and return the minimum and maximum number in the array
         public static string FindMinMax(int[] numArray)
         {
-            Math.Min(numArray);
-            numArray 
-            int min = numArray[0];
             int max = numArray[0];
-            for (int i = 0; i < numArray.Length; i++)
+            int min = numArray[0];
+            for (int i = 0; i <numArray.Length; i++)
             {
-                if (numArray[i] >= max && (i != numArray.Length - 1))
-                {
-                    max = numArray[i];
-                }
-                else if (numArray[i] <= min && (i != numArray.Length - 1))
+                if(min >= numArray[i] && i != numArray.Length)
                 {
                     min = numArray[i];
                 }
+                else if (max < numArray[i] && i != numArray.Length)
+                {
+                    max = numArray[i];
+                }
             }
+    
             string minMax = $"{min},{max}";
             return minMax;
         }
