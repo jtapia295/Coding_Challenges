@@ -37,6 +37,7 @@ namespace Coding_Challenges
             return minMax;
         }
 
+        //Objective: Create a function that multiplies each integer the amount of integers entered.
         public static string MultiplyAllbyLength(int[] numArray)
         {
             string newNumArray = null;
@@ -50,5 +51,7 @@ namespace Coding_Challenges
             }
             return newNumArray;
         }
+
+
     }
 }
