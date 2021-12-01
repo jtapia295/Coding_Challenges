@@ -47,12 +47,29 @@ namespace Coding_Challenges
                         int[] numArray = new int[userInput.Length];
                         foreach(char s in userInput)
                         {
+                            //char representation of 0-9 are consecutive numbers. Subtracting the char number by char 0 will result in the int value
                             int num = s - '0';
                             Console.WriteLine(s);
                             numArray[it] = num;
                             it++;
                         }
                         Console.WriteLine($"Here is your min and max number from your list of numbers,{ FindMinMax(numArray)} "); 
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Please enter a list of numbers to parse");
+                        string userNumber = Console.ReadLine();
+                        int it2 = 0;
+                        int[] numArray2 = new int[userNumber.Length];
+                        foreach (char s in userNumber)
+                        {
+                            //char representation of 0-9 are consecutive numbers. Subtracting the char number by char 0 will result in the int value
+                            int num = s - '0';
+                            Console.WriteLine(s);
+                            numArray2[it2] = num;
+                            it2++;
+                        }
+                        Console.WriteLine($"Here are all your numbers multiplied by the amount of numbers entered{ MultiplyAllbyLength(numArray2)} ");
                         break;
                 }
             }

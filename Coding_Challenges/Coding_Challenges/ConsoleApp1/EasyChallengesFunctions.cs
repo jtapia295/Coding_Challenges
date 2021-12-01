@@ -36,5 +36,19 @@ namespace Coding_Challenges
             string minMax = $"{min},{max}";
             return minMax;
         }
+
+        public static string MultiplyAllbyLength(int[] numArray)
+        {
+            string newNumArray = null;
+            foreach(int num in numArray)
+            {
+                if (newNumArray == null)
+                {
+                    newNumArray = $"{num * numArray.Length}";
+                }
+                newNumArray = newNumArray + $",{num * numArray.Length}";
+            }
+            return newNumArray;
+        }
     }
 }
