@@ -9,41 +9,48 @@ namespace Coding_Challenges
         public static bool PalindromeDescendent(int num)
         {
             //Convert num to string
-            string currentNum = num.ToString();
+            string currentNum = $"{num}";
 
             while (currentNum.Length >= 2)
             {
-                //Check if current number is a Palingdrome
-                char[] numArray = currentNum.ToCharArray();
-                Array.Reverse(numArray);
-                bool palinCheck = currentNum == new string(numArray);
+                //Check if current number is a Palindrome
+                string reversedNum = "";
+                for (int i = currentNum.Length -1 ; i >= 0; i--)
+                {
+                    reversedNum = reversedNum + $"{currentNum[i]}";
+                }
+                Console.WriteLine(reversedNum);
+                bool palinCheck = currentNum == reversedNum;
 
                 //Ends function if num is a palindrome
                 if (palinCheck)
                 {
                     return true;
                 }
+
                 else if (!palinCheck)
                 {
+                    //Ends function if not palindrome and equal length of 2
                     if (currentNum.Length == 2)
                     {
                         return false;
                     }
+
                     string[] childNum = new string[currentNum.Length];
-                    for (int i = 0; i < currentNum.Length; i += 2)
+
+                    if (currentNum.Length % 2 == 0)
                     {
-                        try
+                        for (int i = 0; i < currentNum.Length - 1; i += 2)
                         {
-                            string iSum = (Int32.Parse(currentNum[i].ToString()) + Int32.Parse(currentNum[i + 1].ToString())).ToString();
+
+                            string iSum = (int.Parse(currentNum[i].ToString()) + int.Parse(currentNum[i + 1].ToString())).ToString();
                             childNum[i] = iSum;
-                        }
-                        catch (IndexOutOfRangeException ex)
-                        {
-                            Console.WriteLine("Descendent Int Created");
                         }
                     }
                     currentNum = string.Join("", childNum);
+
                     currentNum.Trim();
+                    Console.WriteLine(currentNum);
                 }
             }
             return false;
