@@ -20,55 +20,83 @@ namespace Coding_Challenges
 
         public void Insert(T data)
         {
-            Node<T> currentNode = this;
-            Node<T> nodeInsert = new Node<T>(data);
+            //My Solution
+            //------------------------
+            //var parentNode = this;
+            //Node<T> currentNode = this;
+            //Node<T> nodeInsert = new Node<T>(data);
+            //int compare = nodeInsert.Data.CompareTo(currentNode.Data);
+            //if (compare == -1)
+            //{
+            //    if (currentNode.Left != null)
+            //    {
+            //        currentNode = currentNode.Left;
+            //        currentNode.Insert(nodeInsert.Data);
+            //    }
+            //    else if (currentNode.Left == null)
+            //    {
+            //        currentNode.Left = nodeInsert;
+            //        Console.WriteLine($"Node {currentNode.Left.Data} inserted to the left of {currentNode.Data}");
+            //    }
+            //}
+            //currentNode = parentNode;
+            //if (compare == 1)
+            //{
+            //    if (currentNode.Right != null)
+            //    {
+            //        currentNode = currentNode.Right;
+            //        currentNode.Insert(nodeInsert.Data);
+            //    }
+            //    else if (currentNode.Right == null)
+            //    {
+            //        currentNode.Right = nodeInsert;
+            //        Console.WriteLine($"Node {currentNode.Right.Data} inserted to the right of {currentNode.Data}");
+            //    }
 
-            int compare = nodeInsert.Data.CompareTo(currentNode.Data);
-            bool operation = true;
-            while (operation)
+            //Optimal Solution
+            //--------------------------------
+            if (data.CompareTo(Data) < 0)
             {
-                if (currentNode.Left != null && compare == -1)
-                {
-                    currentNode = currentNode.Left;
-                }
-                else if(currentNode.Left == null && compare == -1)
-                {
-                    currentNode.Left = nodeInsert;
-                    Console.WriteLine($"Node inserted to the left of {currentNode.Data}");
-                    operation = false;
-                }
-
-                if (currentNode.Right != null && compare == 1)
-                {
-                    currentNode = currentNode.Right;
-                }
-                else if (currentNode.Right == null && compare == 1)
-                {
-                    currentNode.Right = nodeInsert;
-                    Console.WriteLine($"Node inserted to the right of {currentNode.Data}");
-                    operation = false;
-                }
+                //Add to left
+                if (Left == null)
+                    Left = new Node<T>(data);
+                else
+                    Left.Insert(data);
             }
-            // TODO - add code here to implement inserting new data into tree
+            else
+            {
+                //Add to right
+                if (Right == null)
+                    Right = new Node<T>(data);
+                else
+                    Right.Insert(data);
+            }
         }
+    
 
 
 
-
+         public static List<T> nodes = new List<T>();
+         
         public IEnumerable<T> GetTreeData()
         {
-            var nodes = new List<T>();
+            var parentNode = this;
             var currentNode = this;
-            nodes.Add(currentNode.Data);
+            //if (!nodes.Contains(currentNode.Data))
+            //{
+                nodes.Add(currentNode.Data);
+            //}
+
             if (currentNode.Left != null)
             {
                 currentNode = currentNode.Left;
-                nodes = (List<T>)currentNode.GetTreeData();
+                currentNode.GetTreeData();
             }
+            currentNode = parentNode;
             if (currentNode.Right != null)
             {
-                currentNode = currentNode.Left;
-                nodes = (List<T>)currentNode.GetTreeData();
+                currentNode = currentNode.Right;
+                currentNode.GetTreeData();
             }
             nodes.Sort();
             // TODO - add code here to return an enumerable collection of tree

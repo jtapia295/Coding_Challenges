@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using static Coding_Challenges.ExpertChallenges;
 
 
-
 namespace Coding_Challenges
 {
+
     public class Program
     {
         public static void Main(string[] args)
@@ -73,9 +73,34 @@ namespace Coding_Challenges
             //                Console.WriteLine($"Here is your time in binary format \n " +
             //                    $"{binaryClock[0]}, \n {binaryClock[1]}, \n {binaryClock[2]}, \n {binaryClock[3]}");
             //                break;
-                    //}
-                //}
-         }
+            //}
+            //}
+
+            //var root = new Node<int>(10);
+            //root.Insert(5);
+            //root.Insert(3);
+            //root.Insert(12);
+            //root.Insert(13);
+            //root.Insert(11);
+            //root.Insert(6);
+            //string treeData = string.Join(", ", root.GetTreeData().Select(d => d.ToString()));
+            
+            //Console.WriteLine(treeData);
+            Console.WriteLine("\n\n\n\n");
+            
+            var root2 = new Node<string>("13");
+            root2.Insert("5");
+            root2.Insert("3");
+            root2.Insert("11");
+            root2.Insert("12");
+            root2.Insert("10");
+            root2.Insert("6");
+            string treeData2 = string.Join(", ", root2.GetTreeData().Select(d => d.ToString()));
+            Console.WriteLine(treeData2);
+
+            Console.WriteLine("3".CompareTo("5"));
+
+        }
       
       
     }
