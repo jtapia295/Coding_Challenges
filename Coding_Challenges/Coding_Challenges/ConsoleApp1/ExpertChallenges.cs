@@ -15,7 +15,7 @@ namespace Coding_Challenges
             {
                 //Check if current number is a Palindrome
                 string reversedNum = "";
-                for (int i = currentNum.Length -1 ; i >= 0; i--)
+                for (int i = currentNum.Length -1 ; i >= 0; i--) 
                 {
                     reversedNum = reversedNum + $"{currentNum[i]}";
                 }
