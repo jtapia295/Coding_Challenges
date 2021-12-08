@@ -76,6 +76,9 @@ namespace Coding_Challenges
             //}
             //}
 
+            //--------------------------------------------------------------------------------------
+            //Tests for Generic Binary Tree
+
             //var root = new Node<int>(10);
             //root.Insert(5);
             //root.Insert(3);
@@ -84,22 +87,43 @@ namespace Coding_Challenges
             //root.Insert(11);
             //root.Insert(6);
             //string treeData = string.Join(", ", root.GetTreeData().Select(d => d.ToString()));
-            
+
             //Console.WriteLine(treeData);
-            Console.WriteLine("\n\n\n\n");
+            //Console.WriteLine("\n\n\n\n");
+
+            //var root2 = new Node<string>("13");
+            //root2.Insert("5");
+            //root2.Insert("3");
+            //root2.Insert("11");
+            //root2.Insert("12");
+            //root2.Insert("10");
+            //root2.Insert("6");
+            //string treeData2 = string.Join(", ", root2.GetTreeData().Select(d => d.ToString()));
+            //Console.WriteLine(treeData2);
+
+            //---------------------------------------------------------------------------------------------
+            //Tests for Multiple Choice Tests Challenge
+
+            var paper1 = new Testpaper("Maths", new string[] { "1A", "2C", "3D", "4A", "5A" }, "60%");
+            var paper2 = new Testpaper("Chemistry", new string[] { "1C", "2C", "3D", "4A" }, "75%");
+            var paper3 = new Testpaper("Computing", new string[] { "1D", "2C", "3C", "4B", "5D", "6C", "7A" }, "75%");
+            var paper4 = new Testpaper("Physics", new string[] { "1A", "2B", "3A", "4C", "5A", "6C", "7A", "8C", "9D", "10A", "11A" }, "90%");
+
+
+            //Console.WriteLine(string.Join(",",paper4.MarkScheme.Select(d => d.ToString())));
             
-            var root2 = new Node<string>("13");
-            root2.Insert("5");
-            root2.Insert("3");
-            root2.Insert("11");
-            root2.Insert("12");
-            root2.Insert("10");
-            root2.Insert("6");
-            string treeData2 = string.Join(", ", root2.GetTreeData().Select(d => d.ToString()));
-            Console.WriteLine(treeData2);
+            
+            var student1 = new Student();
+            var student2 = new Student();
+            var student3 = new Student();
 
-            Console.WriteLine("3".CompareTo("5"));
+            student1.TakeTest(paper1, new string[] { "1A", "2D", "3D", "4A", "5A" });
+            student2.TakeTest(paper3, new string[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B" });
+            student3.TakeTest(paper1, new string[] { "1C", "2D", "3A", "4C", "5A" });
+            student3.TakeTest(paper3, new string[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B" });
+            student3.TakeTest(paper4, new string[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B", "8C", "9D", "10A", "11A" });
 
+            Console.WriteLine(string.Join(",",student3.TestsTaken.Select(d => d.ToString()))); 
         }
       
       

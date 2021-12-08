@@ -82,10 +82,7 @@ namespace Coding_Challenges
         {
             var parentNode = this;
             var currentNode = this;
-            //if (!nodes.Contains(currentNode.Data))
-            //{
-                nodes.Add(currentNode.Data);
-            //}
+            nodes.Add(currentNode.Data);
 
             if (currentNode.Left != null)
             {
@@ -101,7 +98,6 @@ namespace Coding_Challenges
             nodes.Sort();
             // TODO - add code here to return an enumerable collection of tree
             // objects (of type 'T') in ascending order
-
             return nodes;
         }
     }
