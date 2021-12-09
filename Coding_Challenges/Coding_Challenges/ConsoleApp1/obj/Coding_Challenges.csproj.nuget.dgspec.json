@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding_Projects\\Coding_Challenges\\Coding_Challenges\\Coding_Challenges\\ConsoleApp1\\Coding_Challenges.csproj": {}
+    "/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/Coding_Challenges/ConsoleApp1/Coding_Challenges.csproj": {}
   },
   "projects": {
-    "D:\\Coding_Projects\\Coding_Challenges\\Coding_Challenges\\Coding_Challenges\\ConsoleApp1\\Coding_Challenges.csproj": {
+    "/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/Coding_Challenges/ConsoleApp1/Coding_Challenges.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding_Projects\\Coding_Challenges\\Coding_Challenges\\Coding_Challenges\\ConsoleApp1\\Coding_Challenges.csproj",
+        "projectUniqueName": "/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/Coding_Challenges/ConsoleApp1/Coding_Challenges.csproj",
         "projectName": "Coding_Challenges",
-        "projectPath": "D:\\Coding_Projects\\Coding_Challenges\\Coding_Challenges\\Coding_Challenges\\ConsoleApp1\\Coding_Challenges.csproj",
-        "packagesPath": "C:\\Users\\jtapi\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding_Projects\\Coding_Challenges\\Coding_Challenges\\Coding_Challenges\\ConsoleApp1\\obj\\",
+        "projectPath": "/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/Coding_Challenges/ConsoleApp1/Coding_Challenges.csproj",
+        "packagesPath": "/Users/josetapia/.nuget/packages/",
+        "outputPath": "/Users/josetapia/Projects/Coding Challenges/Coding_Challenges/Coding_Challenges/Coding_Challenges/ConsoleApp1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jtapi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/josetapia/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\jtapi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\jtapi\\.nuget\\packages"
+      "/Users/josetapia/.dotnet/store/|arch|/|tfm|",
+      "/Users/josetapia/.nuget/packages"
     ]
   }
 }

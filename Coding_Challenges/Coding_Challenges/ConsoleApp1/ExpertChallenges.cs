@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
 namespace Coding_Challenges
 {
     public static class ExpertChallenges
@@ -160,6 +163,65 @@ namespace Coding_Challenges
                 }
             }
             return binaryTime;
+        }
+
+        //----------------------------------------------------------------------
+
+        /*Objective: Create a function that takes in two integers start and n and returns a list of the first N terms 
+        of the look and say sequence starting at the given start.
+
+        1.Start with a term in the sequence (for example, 111312211):
+        2.Split it into subsequences of consecutive repeating digits:
+        3.Count the number of digits in each subsequence:
+        4.Turn everything into digits:
+        5.Now combine everything into one number:
+        6.So 3113112221 is the next term in the sequence after 111312211.
+        */
+        static List<long> numList = new List<long>();
+
+        public static IEnumerable<long> LookAndSay(long start, int n)
+        {
+            string initNum = $"{start}";
+            int longLength = initNum.Length;
+            string subSequenceNumber = $"{initNum[0] - '0'}";
+            int lastNumber = subSequenceNumber[subSequenceNumber.Length - 1] - '0';
+            List<string> instNums = new List<string>();
+            numList.Add(start);
+            
+
+            //Iterate through initial start number
+            for (int i = 0; i < longLength; i++)
+            {
+                int currentIt = initNum[i] - '0';
+                //Concat next int if equal to last number in instNum
+                if (currentIt == lastNumber && longLength > 1)
+                {
+                    if (i != 0)
+                    {
+                        subSequenceNumber += $"{initNum[i] - '0'}";
+                    }
+
+                }
+                else if (currentIt != lastNumber)
+                {
+                    instNums.Add(subSequenceNumber);
+                    subSequenceNumber = $"{initNum[i] - '0'}";
+                }
+            }
+
+            string newStart = " ";
+
+            foreach (string inst in instNums)
+            {
+                newStart += $"{inst.Length}{inst[0] - '0'}";
+            }
+            long finalNum = long.Parse(newStart.Trim());
+            //numList.Add(finalNum);
+            while (numList.Count < n)
+            {
+              LookAndSay(finalNum, n);
+            }
+            return numList;
         }
     }
 }
