@@ -128,10 +128,13 @@ namespace Coding_Challenges
             //----------------------------------------------------------------------------------------------
             //Tests for look and say sequence
 
-            Console.WriteLine(string.Join(",", LookAndSay(22255,3).Select(d => d.ToString())));
-           
+            //Console.WriteLine(string.Join(",", LookAndSay(123,4).Select(d => d.ToString())));
+            //Console.WriteLine(string.Join(",", LookAndSay(1225, 4).Select(d => d.ToString())));
+            Console.WriteLine(string.Join(",", LookAndSay(2, 8).Select(d => d.ToString())));
+
+    
         }
-      
-      
+
+
     }
 }

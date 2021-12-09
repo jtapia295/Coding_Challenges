@@ -177,18 +177,20 @@ namespace Coding_Challenges
         5.Now combine everything into one number:
         6.So 3113112221 is the next term in the sequence after 111312211.
         */
-        static List<long> numList = new List<long>();
+        //List<long> numList = new List<long>();
 
-        public static IEnumerable<long> LookAndSay(long start, int n)
+        public static IEnumerable<long> LookAndSay(long start, int n, List<long> numList = null)
         {
+            if (numList == null)
+            {
+                numList = new List<long>();
+            }
             string initNum = $"{start}";
             int longLength = initNum.Length;
             string subSequenceNumber = $"{initNum[0] - '0'}";
             int lastNumber = subSequenceNumber[subSequenceNumber.Length - 1] - '0';
             List<string> instNums = new List<string>();
             numList.Add(start);
-            
-
             //Iterate through initial start number
             for (int i = 0; i < longLength; i++)
             {
@@ -199,29 +201,59 @@ namespace Coding_Challenges
                     if (i != 0)
                     {
                         subSequenceNumber += $"{initNum[i] - '0'}";
+                        if (i == longLength - 1)
+                        {
+                            instNums.Add(subSequenceNumber);
+                        }
                     }
-
+                }
+                else if (currentIt == lastNumber && longLength == 1)
+                {
+                    instNums.Add(subSequenceNumber);
                 }
                 else if (currentIt != lastNumber)
                 {
                     instNums.Add(subSequenceNumber);
                     subSequenceNumber = $"{initNum[i] - '0'}";
+                    if (i == longLength - 1)
+                    {
+                        instNums.Add(subSequenceNumber);
+                    }
+                    lastNumber = subSequenceNumber[subSequenceNumber.Length - 1] - '0';
                 }
             }
-
             string newStart = " ";
-
             foreach (string inst in instNums)
             {
                 newStart += $"{inst.Length}{inst[0] - '0'}";
             }
-            long finalNum = long.Parse(newStart.Trim());
-            //numList.Add(finalNum);
+            long finalNum = 0;
+            if (numList.Count != n)
+            {
+                finalNum = long.Parse(newStart.Trim());
+            }
             while (numList.Count < n)
             {
-              LookAndSay(finalNum, n);
+                LookAndSay(finalNum, n, numList);
             }
             return numList;
         }
+
+        public static long[] LookAndSay(long start, int n) //Optimized Solution
+        {
+            List<long> res = new List<long> { start };
+            string s;
+            for (int i = 0; i < n - 1; i++)
+            {
+                s = "";
+                foreach (Match m in Regex.Matches(res[res.Count - 1].ToString(), @"(\d)\1*"))
+                {
+                    s += m.ToString().Length.ToString() + m.ToString().Substring(0, 1);
+                }
+                res.Add(long.Parse(s));
+            }
+            return res.ToArray();
+        }
     }
+
 }
